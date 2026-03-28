@@ -67,6 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     nextSlide(1);
 });
 
-function showCredits() {
-    alert("photo credits : smirk\ndev credits : aj");
+function showCreditsModal() {
+    document.getElementById('creditsModal').classList.add('active');
+}
+
+function closeCreditsModal() {
+    document.getElementById('creditsModal').classList.remove('active');
 }

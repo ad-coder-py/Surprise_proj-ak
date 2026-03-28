@@ -584,12 +584,6 @@ body {
     color: #e91e63;
     z-index: 4;
     filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.2));
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.envelope-heart:hover {
-    transform: translateX(-50%) scale(1.1);
 }
 
 .the-letter {
@@ -693,6 +687,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fake-stamp:hover {
+    transform: rotate(8deg) scale(1.1);
 }
 
 .btn-ab-br {
@@ -700,4 +700,65 @@ body {
     bottom: 30px;
     right: 30px;
     z-index: 10;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.credits-text p {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.2rem;
+    color: var(--black);
+    margin: 5px 0;
+    text-transform: lowercase;
+}
+.btn-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

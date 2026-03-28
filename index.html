@@ -406,7 +406,7 @@
                 <div class="letter-scene">
                     <div class="speech-bubble sb1">Love you</div>
                     <div class="speech-bubble sb2">♡♡♡♡</div>
-                    <div class="fake-stamp">🌸</div>
+                    <div class="fake-stamp" onclick="showCreditsModal()">🌸</div>
 
                     <div class="envelope-wrap">
                         <div class="envelope-back"></div>
@@ -416,7 +416,7 @@
                                 you, more than I ever say out loud.❤️</p>
                         </div>
                         <div class="envelope-front"></div>
-                        <div class="envelope-heart" onclick="showCredits()">❤️</div>
+                        <div class="envelope-heart">❤️</div>
                     </div>
 
                     <div class="photobooth-strip">
@@ -428,6 +428,18 @@
                 </div>
                 <button class="btn btn-black btn-ab-br" onclick="nextSlide(1)">BACK</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Credits Modal -->
+    <div id="creditsModal" class="modal-overlay" onclick="closeCreditsModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="pic8.jpeg" alt="Credits Photo">
+            <div class="credits-text">
+                <p>photo credits : smirk</p>
+                <p>dev credits : aj</p>
+            </div>
+            <button class="btn btn-black btn-close" onclick="closeCreditsModal()">X</button>
         </div>
     </div>
 
