@@ -1,5 +1,5 @@
 let currentPasscode = "";
-const correctPasscode = "0000"; // This can be changed as needed
+const correctPasscode = "2905"; // This can be changed as needed
 let currentSlide = 1;
 
 function pressKey(num) {
@@ -66,3 +66,7 @@ function blowCandles() {
 document.addEventListener("DOMContentLoaded", () => {
     nextSlide(1);
 });
+
+function showCredits() {
+    alert("photo credits : smirk\ndev credits : aj");
+}
