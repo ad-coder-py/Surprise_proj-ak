@@ -73,49 +73,180 @@
         <!-- Slide 4: Cake Interaction -->
         <div class="slide slide-r" id="slide4">
             <div class="slide-content">
-                <div class="cake-container" id="cake-interaction">
-                    <div class="css-cake">
-                        <div class="cake-plate"></div>
-                        <div class="cake-layer bottom"></div>
-                        <div class="cake-layer middle"></div>
-                        <div class="cake-layer top"></div>
-                        <div class="cake-icing"></div>
-                        <div class="cake-drip d1"></div>
-                        <div class="cake-drip d2"></div>
-                        <div class="cake-drip d3"></div>
-                        <div class="cake-drip d4"></div>
-                        <div class="cake-candle c1"></div>
-                        <div class="cake-candle c2"></div>
-                        <div class="cake-candle c3"></div>
-                        <div class="flames">
-                            <div class="flame f1"></div>
-                            <div class="flame f2"></div>
-                            <div class="flame f3"></div>
-                        </div>
-                    </div>
+                <div class="cake-wrapper" id="cake-interaction">
+                    <svg viewBox="0 0 400 350" class="cake-svg-new">
+                        <defs>
+                            <g id="flame-art">
+                                <path d="M0,0 C-10,-10 -6,-24 0,-30 C6,-24 10,-10 0,0 Z" fill="#ff9800" stroke="#f44336" stroke-width="2"/>
+                                <path d="M0,-3 C-6,-10 -4,-20 0,-24 C4,-20 6,-10 0,-3 Z" fill="#ffeb3b"/>
+                                <path d="M0,-6 C-3,-10 -2,-16 0,-18 C2,-16 3,-10 0,-6 Z" fill="#ffffff"/>
+                            </g>
+                            <clipPath id="bottom-tier-clip">
+                                <rect x="30" y="220" width="340" height="110" rx="20"/>
+                            </clipPath>
+                            <clipPath id="top-tier-clip">
+                                <rect x="60" y="130" width="280" height="110" rx="20"/>
+                            </clipPath>
+                        </defs>
+
+                        <!-- Candles (Behind Top Icing) -->
+                        <g class="candle-group">
+                            <rect x="95" y="70" width="14" height="70" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="130" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="165" y="65" width="14" height="75" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="200" y="70" width="14" height="70" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="235" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="270" y="65" width="14" height="75" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="305" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                        </g>
+
+                        <!-- Bottom Tier Body -->
+                        <rect x="30" y="220" width="340" height="110" rx="20" fill="#a5def2" stroke="#4a95b5" stroke-width="4"/>
+                        <g clip-path="url(#bottom-tier-clip)">
+                            <ellipse cx="80" cy="270" rx="15" ry="6" fill="#8bcde6"/>
+                            <ellipse cx="140" cy="290" rx="20" ry="7" fill="#8bcde6"/>
+                            <ellipse cx="280" cy="250" rx="12" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="320" cy="280" rx="18" ry="8" fill="#8bcde6"/>
+                            <ellipse cx="100" cy="310" rx="14" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="230" cy="315" rx="25" ry="7" fill="#8bcde6"/>
+                        </g>
+                        
+                        <!-- Bottom Tier Icing -->
+                        <path d="M 70,220 
+                                 L 330,220 
+                                 C 355,220 370,225 370,240 
+                                 C 370,265 355,270 345,245 
+                                 C 335,220 325,220 310,250 
+                                 C 295,280 275,280 260,245 
+                                 C 245,210 225,210 210,255 
+                                 C 195,290 175,290 160,250 
+                                 C 145,210 125,210 110,255 
+                                 C 95,290 75,290 60,250 
+                                 C 45,210 30,230 30,240 
+                                 C 30,225 45,220 70,220 Z" 
+                              fill="#f4eff9" stroke="#b4a9cc" stroke-width="4" stroke-linejoin="round"/>
+
+                        <!-- Top Tier Body -->
+                        <rect x="60" y="130" width="280" height="110" rx="20" fill="#a5def2" stroke="#4a95b5" stroke-width="4"/>
+                        <g clip-path="url(#top-tier-clip)">
+                            <ellipse cx="100" cy="180" rx="14" ry="6" fill="#8bcde6"/>
+                            <ellipse cx="220" cy="200" rx="18" ry="7" fill="#8bcde6"/>
+                            <ellipse cx="260" cy="160" rx="12" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="150" cy="220" rx="20" ry="7" fill="#8bcde6"/>
+                        </g>
+
+                        <!-- Top Tier Icing -->
+                        <path d="M 100,130
+                                 L 300,130
+                                 C 325,130 340,130 340,150
+                                 C 340,175 325,180 315,155
+                                 C 305,130 295,130 280,160
+                                 C 265,190 245,190 230,155
+                                 C 215,120 195,120 180,165
+                                 C 165,200 145,200 130,160
+                                 C 115,125 105,125 90,155
+                                 C 75,180 60,175 60,150
+                                 C 60,130 75,130 100,130 Z"
+                              fill="#f4eff9" stroke="#b4a9cc" stroke-width="4" stroke-linejoin="round"/>
+
+                        <!-- Sparkles -->
+                        <path d="M 360,90 Q 365,90 365,85 Q 365,90 370,90 Q 365,90 365,95 Q 365,90 360,90 Z" fill="#ffffff" />
+                        <path d="M 50,110 Q 55,110 55,105 Q 55,110 60,110 Q 55,110 55,115 Q 55,110 50,110 Z" fill="#ffffff" />
+                        
+                        <!-- Flames -->
+                        <g class="flames">
+                            <use href="#flame-art" x="102" y="65" class="flame"/>
+                            <use href="#flame-art" x="137" y="70" class="flame"/>
+                            <use href="#flame-art" x="172" y="60" class="flame"/>
+                            <use href="#flame-art" x="207" y="65" class="flame"/>
+                            <use href="#flame-art" x="242" y="70" class="flame"/>
+                            <use href="#flame-art" x="277" y="60" class="flame"/>
+                            <use href="#flame-art" x="312" y="70" class="flame"/>
+                        </g>
+                    </svg>
+                    <button class="btn-blow-beautiful" onclick="blowCandles()">BLOW</button>
                 </div>
-                <button class="btn btn-blow" onclick="blowCandles()">BLOW</button>
             </div>
         </div>
 
         <!-- Slide 5: Post-Blow Greeting -->
         <div class="slide slide-r" id="slide5">
             <div class="slide-content">
-                <div class="cake-container">
-                    <div class="css-cake">
-                        <div class="cake-plate"></div>
-                        <div class="cake-layer bottom"></div>
-                        <div class="cake-layer middle"></div>
-                        <div class="cake-layer top"></div>
-                        <div class="cake-icing"></div>
-                        <div class="cake-drip d1"></div>
-                        <div class="cake-drip d2"></div>
-                        <div class="cake-drip d3"></div>
-                        <div class="cake-drip d4"></div>
-                        <div class="cake-candle c1"></div>
-                        <div class="cake-candle c2"></div>
-                        <div class="cake-candle c3"></div>
-                    </div>
+                <div class="cake-wrapper">
+                    <svg viewBox="0 0 400 350" class="cake-svg-new">
+                        <defs>
+                            <clipPath id="bottom-tier-clip-2">
+                                <rect x="30" y="220" width="340" height="110" rx="20"/>
+                            </clipPath>
+                            <clipPath id="top-tier-clip-2">
+                                <rect x="60" y="130" width="280" height="110" rx="20"/>
+                            </clipPath>
+                        </defs>
+
+                        <!-- Candles (NO FLAMES) -->
+                        <g class="candle-group">
+                            <rect x="95" y="70" width="14" height="70" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="130" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="165" y="65" width="14" height="75" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="200" y="70" width="14" height="70" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="235" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="270" y="65" width="14" height="75" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                            <rect x="305" y="75" width="14" height="65" rx="4" fill="#ff8a9a" stroke="#d65768" stroke-width="3"/>
+                        </g>
+
+                        <!-- Bottom Tier Body -->
+                        <rect x="30" y="220" width="340" height="110" rx="20" fill="#a5def2" stroke="#4a95b5" stroke-width="4"/>
+                        <g clip-path="url(#bottom-tier-clip-2)">
+                            <ellipse cx="80" cy="270" rx="15" ry="6" fill="#8bcde6"/>
+                            <ellipse cx="140" cy="290" rx="20" ry="7" fill="#8bcde6"/>
+                            <ellipse cx="280" cy="250" rx="12" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="320" cy="280" rx="18" ry="8" fill="#8bcde6"/>
+                            <ellipse cx="100" cy="310" rx="14" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="230" cy="315" rx="25" ry="7" fill="#8bcde6"/>
+                        </g>
+                        
+                        <!-- Bottom Tier Icing -->
+                        <path d="M 70,220 
+                                 L 330,220 
+                                 C 355,220 370,225 370,240 
+                                 C 370,265 355,270 345,245 
+                                 C 335,220 325,220 310,250 
+                                 C 295,280 275,280 260,245 
+                                 C 245,210 225,210 210,255 
+                                 C 195,290 175,290 160,250 
+                                 C 145,210 125,210 110,255 
+                                 C 95,290 75,290 60,250 
+                                 C 45,210 30,230 30,240 
+                                 C 30,225 45,220 70,220 Z" 
+                              fill="#f4eff9" stroke="#b4a9cc" stroke-width="4" stroke-linejoin="round"/>
+
+                        <!-- Top Tier Body -->
+                        <rect x="60" y="130" width="280" height="110" rx="20" fill="#a5def2" stroke="#4a95b5" stroke-width="4"/>
+                        <g clip-path="url(#top-tier-clip-2)">
+                            <ellipse cx="100" cy="180" rx="14" ry="6" fill="#8bcde6"/>
+                            <ellipse cx="220" cy="200" rx="18" ry="7" fill="#8bcde6"/>
+                            <ellipse cx="260" cy="160" rx="12" ry="5" fill="#8bcde6"/>
+                            <ellipse cx="150" cy="220" rx="20" ry="7" fill="#8bcde6"/>
+                        </g>
+
+                        <!-- Top Tier Icing -->
+                        <path d="M 100,130
+                                 L 300,130
+                                 C 325,130 340,130 340,150
+                                 C 340,175 325,180 315,155
+                                 C 305,130 295,130 280,160
+                                 C 265,190 245,190 230,155
+                                 C 215,120 195,120 180,165
+                                 C 165,200 145,200 130,160
+                                 C 115,125 105,125 90,155
+                                 C 75,180 60,175 60,150
+                                 C 60,130 75,130 100,130 Z"
+                              fill="#f4eff9" stroke="#b4a9cc" stroke-width="4" stroke-linejoin="round"/>
+
+                        <!-- Sparkles -->
+                        <path d="M 360,90 Q 365,90 365,85 Q 365,90 370,90 Q 365,90 365,95 Q 365,90 360,90 Z" fill="#ffffff" />
+                        <path d="M 50,110 Q 55,110 55,105 Q 55,110 60,110 Q 55,110 55,115 Q 55,110 50,110 Z" fill="#ffffff" />
+                    </svg>
                 </div>
                 <h1 class="bubble-text white">happy birthday my love</h1>
                 <button class="btn btn-white" onclick="prevSlide(4)">BACK</button>
@@ -139,12 +270,32 @@
         <!-- Slide 7: Photo Collage -->
         <div class="slide slide-r" id="slide7">
             <div class="slide-content">
+                <h1 class="scrapbook-title">Happy birthday baby</h1>
                 <div class="scrapbook-frame">
-                    <div class="newsprint-bg">
-                        <img src="pic2.jpeg" alt="Eyes Close-up" class="collage-img">
-                        <div class="newsprint-text">LOVE LOVE LOVE</div>
-                        <div class="stars">✨ ⭐ ✨</div>
+                    <!-- Love text background layer -->
+                    <div class="love-text-bg">
+                        <span>love love love love love love love loved</span>
+                        <span>love love love love love love love love</span>
+                        <span>love love love love love love love love</span>
+                        <span>love love love love love love <b>love.</b></span>
+                        <span>darling, you</span>
+                        <span>are all i ever</span>
+                        <span>wanted love,</span>
+                        <span>so be.</span>
                     </div>
+                    <!-- Photo with tape -->
+                    <div class="collage-photo-wrap">
+                        <img src="pic2.jpeg" alt="Eyes Close-up" class="collage-img">
+                        <div class="tape tape-left"></div>
+                        <div class="tape tape-right"></div>
+                    </div>
+                    <!-- Red stars -->
+                    <div class="star-decor s1">★</div>
+                    <div class="star-decor s2">★</div>
+                    <div class="star-decor s3">★</div>
+                    <div class="star-decor s4">★</div>
+                    <!-- Decorative pin -->
+                    <div class="pin-decor"></div>
                 </div>
                 <button class="btn btn-white btn-next" onclick="nextSlide(8)">NEXT</button>
             </div>
