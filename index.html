@@ -74,33 +74,25 @@
         <div class="slide slide-r" id="slide4">
             <div class="slide-content">
                 <div class="cake-container" id="cake-interaction">
-                    <svg viewBox="0 0 100 100" class="cake-svg">
-                        <!-- Cake Base -->
-                        <path d="M20 80 Q20 70 30 70 L70 70 Q80 70 80 80 L80 90 Q80 100 70 100 L30 100 Q20 100 20 90 Z"
-                            fill="#ADD8E6" />
-                        <path d="M30 60 Q30 50 40 50 L60 50 Q70 50 70 60 L70 70 Q70 80 60 80 L40 80 Q30 80 30 70 Z"
-                            fill="#F0F8FF" />
-                        <!-- Candles -->
-                        <g class="candles">
-                            <rect x="35" y="40" width="2" height="10" fill="pink" />
-                            <rect x="40" y="38" width="2" height="12" fill="pink" />
-                            <rect x="45" y="40" width="2" height="10" fill="pink" />
-                            <rect x="50" y="38" width="2" height="12" fill="pink" />
-                            <rect x="55" y="40" width="2" height="10" fill="pink" />
-                            <rect x="60" y="38" width="2" height="12" fill="pink" />
-                            <rect x="65" y="40" width="2" height="10" fill="pink" />
-                            <!-- Flames -->
-                            <g class="flames">
-                                <circle cx="36" cy="38" r="1.5" fill="orange" class="flame" />
-                                <circle cx="41" cy="36" r="1.5" fill="orange" class="flame" />
-                                <circle cx="46" cy="38" r="1.5" fill="orange" class="flame" />
-                                <circle cx="51" cy="36" r="1.5" fill="orange" class="flame" />
-                                <circle cx="56" cy="38" r="1.5" fill="orange" class="flame" />
-                                <circle cx="61" cy="36" r="1.5" fill="orange" class="flame" />
-                                <circle cx="66" cy="38" r="1.5" fill="orange" class="flame" />
-                            </g>
-                        </g>
-                    </svg>
+                    <div class="css-cake">
+                        <div class="cake-plate"></div>
+                        <div class="cake-layer bottom"></div>
+                        <div class="cake-layer middle"></div>
+                        <div class="cake-layer top"></div>
+                        <div class="cake-icing"></div>
+                        <div class="cake-drip d1"></div>
+                        <div class="cake-drip d2"></div>
+                        <div class="cake-drip d3"></div>
+                        <div class="cake-drip d4"></div>
+                        <div class="cake-candle c1"></div>
+                        <div class="cake-candle c2"></div>
+                        <div class="cake-candle c3"></div>
+                        <div class="flames">
+                            <div class="flame f1"></div>
+                            <div class="flame f2"></div>
+                            <div class="flame f3"></div>
+                        </div>
+                    </div>
                 </div>
                 <button class="btn btn-blow" onclick="blowCandles()">BLOW</button>
             </div>
@@ -110,23 +102,20 @@
         <div class="slide slide-r" id="slide5">
             <div class="slide-content">
                 <div class="cake-container">
-                    <svg viewBox="0 0 100 100" class="cake-svg">
-                        <!-- Cake Base -->
-                        <path d="M20 80 Q20 70 30 70 L70 70 Q80 70 80 80 L80 90 Q80 100 70 100 L30 100 Q20 100 20 90 Z"
-                            fill="#ADD8E6" />
-                        <path d="M30 60 Q30 50 40 50 L60 50 Q70 50 70 60 L70 70 Q70 80 60 80 L40 80 Q30 80 30 70 Z"
-                            fill="#F0F8FF" />
-                        <!-- Candles without flames -->
-                        <g class="candles">
-                            <rect x="35" y="40" width="2" height="10" fill="pink" />
-                            <rect x="40" y="38" width="2" height="12" fill="pink" />
-                            <rect x="45" y="40" width="2" height="10" fill="pink" />
-                            <rect x="50" y="38" width="2" height="12" fill="pink" />
-                            <rect x="55" y="40" width="2" height="10" fill="pink" />
-                            <rect x="60" y="38" width="2" height="12" fill="pink" />
-                            <rect x="65" y="40" width="2" height="10" fill="pink" />
-                        </g>
-                    </svg>
+                    <div class="css-cake">
+                        <div class="cake-plate"></div>
+                        <div class="cake-layer bottom"></div>
+                        <div class="cake-layer middle"></div>
+                        <div class="cake-layer top"></div>
+                        <div class="cake-icing"></div>
+                        <div class="cake-drip d1"></div>
+                        <div class="cake-drip d2"></div>
+                        <div class="cake-drip d3"></div>
+                        <div class="cake-drip d4"></div>
+                        <div class="cake-candle c1"></div>
+                        <div class="cake-candle c2"></div>
+                        <div class="cake-candle c3"></div>
+                    </div>
                 </div>
                 <h1 class="bubble-text white">happy birthday my love</h1>
                 <button class="btn btn-white" onclick="prevSlide(4)">BACK</button>
@@ -137,21 +126,13 @@
         <!-- Slide 6: Gift Selection 2 -->
         <div class="slide slide-w" id="slide6">
             <div class="slide-content">
-                <h1 class="bubble-text">Gift for you - click any gift to open</h1>
+                <h1 class="bubble-text">Gift for you</h1>
                 <div class="gifts-container">
-                    <div class="gift-box" onclick="nextSlide(7)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
-                    <div class="gift-box" onclick="nextSlide(7)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
-                    <div class="gift-box" onclick="nextSlide(7)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(7)">
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(7)">
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(7)">
                 </div>
+                <h2 class="bubble-text">Click any gift to open</h2>
             </div>
         </div>
 
@@ -172,21 +153,13 @@
         <!-- Slide 8: Gift Selection 3 -->
         <div class="slide slide-w" id="slide8">
             <div class="slide-content">
-                <h1 class="bubble-text">Gift for you - click any gift to open</h1>
+                <h1 class="bubble-text">Gift for you</h1>
                 <div class="gifts-container">
-                    <div class="gift-box" onclick="nextSlide(9)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
-                    <div class="gift-box" onclick="nextSlide(9)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
-                    <div class="gift-box" onclick="nextSlide(9)">
-                        <div class="box-top"></div>
-                        <div class="box-side"></div>
-                    </div>
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(9)">
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(9)">
+                    <img src="pic6.avif" alt="Gift" class="gift-img" onclick="nextSlide(9)">
                 </div>
+                <h2 class="bubble-text">Click any gift to open</h2>
             </div>
         </div>
 
@@ -196,7 +169,11 @@
                 <div class="letter-container">
                     <div class="envelope blue">
                         <div class="letter">
-                            <p>"the calm I never knew I needed... I love you, more than I ever say out loud."</p>
+                            <p>"I don’t know how you do it, but you’ve become my favorite feeling. Not just happiness,
+                                but comfort, safety, and a kind of peace that stays even when you’re not around.I don’t
+                                promise perfection, but I promise something real. I promise to choose you, in the
+                                simplest and hardest days . Because you are not just someone I love—you are someone I
+                                never want to lose."</p>
                         </div>
                     </div>
                     <div class="film-strip">

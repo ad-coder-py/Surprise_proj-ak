@@ -274,30 +274,125 @@ body {
     transform: translateY(-50%);
 }
 
-/* Cake */
+/* Better CSS Cake */
 .cake-container {
     width: 300px;
     margin-bottom: 30px;
 }
 
-.cake-svg {
+.css-cake {
+    position: relative;
+    width: 250px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.cake-plate {
+    position: absolute;
+    bottom: 0px;
+    left: -25px;
+    width: 300px;
+    height: 20px;
+    background: #dcdde1;
+    border-radius: 50%;
+    box-shadow: 0 5px 0 #7f8fa6;
+}
+
+.cake-layer {
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+}
+
+.cake-layer.bottom {
+    bottom: 15px;
+    width: 220px;
+    height: 60px;
+    left: 15px;
+    background: #ffb8b8;
+    box-shadow: inset -15px 0 20px rgba(0,0,0,0.1);
+}
+
+.cake-layer.middle {
+    bottom: 75px;
+    width: 180px;
+    height: 50px;
+    left: 35px;
+    background: #ffcccc;
+    box-shadow: inset -15px 0 20px rgba(0,0,0,0.1);
+}
+
+.cake-layer.top {
+    bottom: 125px;
+    width: 140px;
+    height: 45px;
+    left: 55px;
+    background: #ffe6e6;
+    box-shadow: inset -15px 0 20px rgba(0,0,0,0.1);
+}
+
+.cake-icing {
+    position: absolute;
+    bottom: 165px;
+    left: 50px;
+    width: 150px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+}
+
+.cake-drip {
+    position: absolute;
+    background: #ffffff;
+    width: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.cake-drip.d1 { bottom: 135px; left: 60px; height: 40px; }
+.cake-drip.d2 { bottom: 130px; left: 95px; height: 50px; }
+.cake-drip.d3 { bottom: 140px; left: 135px; height: 35px; }
+.cake-drip.d4 { bottom: 145px; left: 170px; height: 25px; }
+
+.cake-candle {
+    position: absolute;
+    width: 12px;
+    height: 40px;
+    background: repeating-linear-gradient(45deg, #fff, #fff 5px, var(--hot-pink) 5px, var(--hot-pink) 10px);
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.cake-candle.c1 { bottom: 180px; left: 70px; }
+.cake-candle.c2 { bottom: 190px; left: 119px; }
+.cake-candle.c3 { bottom: 180px; left: 168px; }
+
+.flames {
+    position: absolute;
+    bottom: 220px;
+    left: 0;
     width: 100%;
+    height: 30px;
+    transition: opacity 0.5s fade-out;
 }
 
 .flame {
-    animation: flicker 0.1s infinite alternate;
+    position: absolute;
+    width: 16px;
+    height: 26px;
+    background: radial-gradient(ellipse at bottom, #ffee58 0%, #ff9800 60%, transparent 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 -5px 15px #ffeb3b;
+    animation: flicker 0.15s infinite alternate;
 }
 
-@keyframes flicker {
-    from {
-        transform: scale(1);
-        opacity: 0.8;
-    }
+.flame.f1 { bottom: 0; left: 68px; }
+.flame.f2 { bottom: 10px; left: 117px; }
+.flame.f3 { bottom: 0; left: 166px; }
 
-    to {
-        transform: scale(1.2);
-        opacity: 1;
-    }
+@keyframes flicker {
+    0% { transform: scale(1) rotate(-1deg); opacity: 0.9; }
+    50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    100% { transform: scale(0.9) rotate(-2deg); opacity: 0.8; }
 }
 
 /* Scrapbook */
